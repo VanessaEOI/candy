@@ -16,7 +16,7 @@ public class CustomerOrder {
 
     @ManyToOne
     @JoinColumn(name = "candyTag_id")
-    private CandyTag candyTag;
+    private Candytag candytag;
 
     // Constructeurs, getters, setters, et méthode toString
 }

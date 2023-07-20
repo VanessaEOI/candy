@@ -1,6 +1,6 @@
 package com.candy.entity;
 
-public enum CandyTagEnum {
+public enum CandytagEnum {
     SAKURA,
     ASAGAO,
     KIKU,

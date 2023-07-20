@@ -1,11 +1,19 @@
 package com.candy.processor;
 
+import org.springframework.stereotype.Component;
+
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class AsagaoProcessor {
+@Component
+public abstract class AsagaoProcessor implements CandytagProcessor{
+
+    @Override
+    public String getCandyTagName() {
+        return "ASAGAO";
+    }
     private static final int MAX_CANDY_PER_CANDYBOX = 50;
     // Méthode pour commander des bonbons uniquement le matin
     public static void asagaoOrder(int quantity) {
