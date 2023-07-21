@@ -11,7 +11,6 @@ public class Candy {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int candyId;
-    private String candyColor;
+    private String candyColorName;
 
-    // Constructeurs, getters, setters, et méthode toString
 }

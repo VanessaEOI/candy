@@ -2,6 +2,8 @@ package com.candy.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class CustomerOrder {
 
@@ -18,5 +20,17 @@ public class CustomerOrder {
     @JoinColumn(name = "candyTag_id")
     private Candytag candytag;
 
-    // Constructeurs, getters, setters, et méthode toString
+    @OneToMany(mappedBy = "customerOrder", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<CandyBox> candyBoxes;
+
+    public List<CandyBox> getCandyBoxes() {
+        return candyBoxes;
+    }
+
+    public void setCandyBoxes(List<CandyBox> candyBoxes) {
+        this.candyBoxes = candyBoxes;
+    }
+
+    public void setOrderCandyQty(int quantity) {
+    }
 }

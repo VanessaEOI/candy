@@ -13,5 +13,4 @@ public class Customer {
     private int customerId;
     private String customerName;
 
-    // Constructeurs, getters, setters, et méthode toString
 }

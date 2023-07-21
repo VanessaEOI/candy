@@ -11,15 +11,26 @@ public class ItemCandyBoxId implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ManyToOne
-    @JoinColumn(name = "candy_id")
-    private Candy candy;
-
+    // Ajouter cette association avec CandyBox
     @ManyToOne
     @JoinColumn(name = "candybox_id")
     private CandyBox candyBox;
 
-    // Constructeurs, getters, setters, et méthode equals() et hashCode
+    private String candyColorName;
 
-    // ...
+    public CandyBox getCandyBox() {
+        return candyBox;
+    }
+
+    public void setCandyBox(CandyBox candyBox) {
+        this.candyBox = candyBox;
+    }
+
+    public String getCandyColorName() {
+        return candyColorName;
+    }
+
+    public void setCandyColorName(String candyColorName) {
+        this.candyColorName = candyColorName;
+    }
 }
